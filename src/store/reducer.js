@@ -1,5 +1,5 @@
 const initialState = {
-    items: {}
+    items: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -10,7 +10,7 @@ const reducer = (state = initialState, action) => {
     }
 
     if (action.type === 'EMPTY_CART') {
-        newState.items = {};
+        newState.items = [];
     }
 
     // Add Logging

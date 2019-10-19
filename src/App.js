@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import './App.css';
 
 import Cart from './routes/Cart';
 import Home from './routes/Home';
@@ -9,40 +7,42 @@ import Navigation from './components/Navigation';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
+import Container from '@material-ui/core/Container';
+
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+
 class App extends Component {
   render() {
-    const { count, updateCart, countDown } = this.props;
-    return (
-      <div className="App">
 
-        <button onClick={() => updateCart({bannaa: 1})}>Up</button>
-        <button onClick={countDown}>Down</button>
-        {count}
+    const theme = createMuiTheme({
+      palette: {
+        primary: {
+          main: '#093c59'
+        }
+      }
+    });
+
+    return (
+      <ThemeProvider theme={theme}>
         <Router>
+          <CssBaseline />
           <header>
             <div>
               <Navigation />
             </div>
           </header>
-          <Route exact path="/" component={Home} />
-          <Route path="/cart" component={Cart} />
+          <Container maxWidth="lg">
+            <Typography component="div">
+              <Route exact path="/" component={Home} />
+              <Route path="/cart" component={Cart} />
+            </Typography>
+          </Container>
         </Router>
-      </div>
+      </ThemeProvider>
     );
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    count: state.count
-  }
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    updateCart: (items) => dispatch({type: 'UPDATE_CART', items}),
-    countDown: () => dispatch({type: 'EMPTY_CART'})
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
