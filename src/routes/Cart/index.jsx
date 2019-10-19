@@ -65,7 +65,7 @@ class Cart extends Component {
 
     if (!items.length) {
       return (
-        <div>
+        <div className="centered">
           <h1>Cart</h1>
           <p>No Items, why not <Link to="/">go shopping</Link>?</p>
         </div>
@@ -73,7 +73,7 @@ class Cart extends Component {
     }
     return (
       <div>
-        <h1>Cart</h1>
+        <h1 className="centered">Cart</h1>
         <Paper>
           <Table aria-label="Cart">
             <TableHead>

@@ -104,7 +104,7 @@ class Shop extends Component {
     render() {
         const items = this.getProducts();
         return (
-            <div>
+            <div className="centered">
                 <h1>Shop</h1>
                
                 <div className="products">
