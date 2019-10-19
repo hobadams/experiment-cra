@@ -1,5 +1,17 @@
 .title {
     font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 0;
+}
+
+.icon {
+    margin-left: 10px;
+}
+
+.header {
+    text-align: center;
 }
 
 .navigation {
@@ -19,6 +31,7 @@
     text-decoration: none;
 }
 
-.navigation__link:hover {
+.navigation__link:hover,
+.selected {
     text-decoration: underline;
 }
