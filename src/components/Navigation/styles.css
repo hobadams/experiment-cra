@@ -1,5 +1,5 @@
 .title {
-    font-size: 2rem;
+    font-size: 1.6rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +21,7 @@
 }
 
 .navigation__item {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0 10px;
     display: inline-block;
 

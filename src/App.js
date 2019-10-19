@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './app.css';
+
 import Cart from './routes/Cart';
 import Home from './routes/Home';
 
@@ -25,22 +27,24 @@ class App extends Component {
     });
 
     return (
-      <ThemeProvider theme={theme}>
-        <Router>
-          <CssBaseline />
-          <header>
-            <div>
-              <Navigation />
-            </div>
-          </header>
-          <Container maxWidth="lg">
-            <Typography component="div">
-              <Route exact path="/" component={Home} />
-              <Route path="/cart" component={Cart} />
-            </Typography>
-          </Container>
-        </Router>
-      </ThemeProvider>
+      <div className="app">
+        <ThemeProvider theme={theme}>
+          <Router>
+            <CssBaseline />
+            <header>
+              <div>
+                <Navigation />
+              </div>
+            </header>
+            <Container maxWidth="lg">
+              <Typography component="div">
+                <Route exact path="/" component={Home} />
+                <Route path="/cart" component={Cart} />
+              </Typography>
+            </Container>
+          </Router>
+        </ThemeProvider>
+      </div>
     );
   }
 }
