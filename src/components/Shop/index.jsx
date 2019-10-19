@@ -57,7 +57,7 @@ class Shop extends Component {
          * Add a new product to the cart
          */
         if (!items.length || !exists) {
-            
+
             const cartItem = {
                 id,
                 qty: 1,
@@ -104,8 +104,13 @@ class Shop extends Component {
     render() {
         const items = this.getProducts();
         return (
-            <div className="products">
-                {items.map((item) => this.renderProductItem(item))}
+            <div>
+                <h1>Shop</h1>
+               
+                <div className="products">
+                    {items.map((item) => this.renderProductItem(item))}
+                </div>
+                
             </div>
         );
     }

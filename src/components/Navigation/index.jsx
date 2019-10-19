@@ -47,10 +47,10 @@ class Navigation extends Component {
                         </h2>
                         <ul className="navigation">
                             <li className="navigation__item">
-                                <NavLink to="/" className="navigation__link" activeClassName="selected">Shop</NavLink>
+                                <NavLink exact to="/" className="navigation__link" activeClassName="selected">Shop</NavLink>
                             </li>
                             <li className="navigation__item">
-                                <NavLink to="/cart" className="navigation__link" activeClassName="selected">Cart {total ? `(${total})` : ''}</NavLink>
+                                <NavLink exact to="/cart" className="navigation__link" activeClassName="selected">Cart {total ? `(${total})` : ''}</NavLink>
                             </li>
                         </ul>
                     </Container>

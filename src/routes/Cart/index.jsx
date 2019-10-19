@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { Link } from "react-router-dom";
+
 import './styles.css';
 
 import Table from '@material-ui/core/Table';
@@ -65,7 +67,7 @@ class Cart extends Component {
       return (
         <div>
           <h1>Cart</h1>
-          <p>No Items</p>
+          <p>No Items, why not <Link to="/">go shopping</Link>?</p>
         </div>
       )
     }
