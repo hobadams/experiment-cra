@@ -1,7 +1,5 @@
 import React from "react";
-import {
-    NavLink
-} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navigation() {
     return (
@@ -10,7 +8,7 @@ export default function Navigation() {
                 <NavLink to="/">Home</NavLink>
             </li>
             <li>
-                <NavLink to="/about">About</NavLink>
+                <NavLink to="/cart">Cart</NavLink>
             </li>
         </ul>
 

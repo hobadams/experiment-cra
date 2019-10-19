@@ -1,16 +1,16 @@
 const initialState = {
-    count: 2
+    items: {}
 };
 
 const reducer = (state = initialState, action) => {
     const newState = {...state};
 
-    if (action.type === 'COUNT_UP') {
-        newState.count++;
+    if (action.type === 'UPDATE_CART') {
+        newState.items = action.items;
     }
 
-    if (action.type === 'COUNT_DOWN') {
-        newState.count--;
+    if (action.type === 'EMPTY_CART') {
+        newState.items = {};
     }
 
     // Add Logging
